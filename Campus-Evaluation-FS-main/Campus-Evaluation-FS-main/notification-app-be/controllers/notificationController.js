@@ -31,13 +31,13 @@ exports.getNotifications = (req, res) => {
         endIndex
     );
 
-    res.status(200).json({
-        total: result.length,
-        page,
-        limit,
-        notifications: paginatedNotifications
-    });
-
+    return res.status(200).json({
+    success: true,
+    total: result.length,
+    currentPage: page,
+    totalPages: Math.ceil(result.length / limit),
+    notifications: paginatedNotifications
+});
 };
 
 // POST /notifications

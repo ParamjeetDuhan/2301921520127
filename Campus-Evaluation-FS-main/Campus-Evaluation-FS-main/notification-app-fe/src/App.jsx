@@ -1,22 +1,9 @@
-import { useEffect } from "react";
-import { Log } from "./services/logger";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
 
-    useEffect(() => {
+    return <Dashboard />;
 
-        Log(
-            "frontend",
-            "info",
-            "component",
-            "Application Started"
-        );
-
-    }, []);
-
-    return (
-        <h1>Notifications App</h1>
-    );
 }
 
 export default App;
